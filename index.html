@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+<!--<script type="text/javascript" src="ui.tabs.paging.js"></script>-->
+<link rel="stylesheet" type="text/css" href="interface.css"></link>
+
+<!--Scripts to create blocks*****************************************-->
+<script>
+	$(function($) {
+		$("#tabSection").tabs();
+	});
+</script>
+<script type="text/javascript">
+window.onload = function() {
+    createPrompt();
+    createNames();
+    newStructures();
+    gamblingObjects();
+    for ( var i in structure )
+        structure[i].writeCost();
+}
+</script>
+<script>
+	$(function(){
+	    $(window).resize(function(){
+	        placeFooter();
+	    });
+	    placeFooter();
+	    // hide it before it's positioned
+	    $('#bottomHalf').css('display','inline');
+	});
+		
+	function placeFooter() {    
+	    var windHeight = $(window).height();
+	    var footerHeight = $('#bottomHalf').height();
+	    var offset = parseInt(windHeight) - parseInt(footerHeight);
+	    $('#bottomHalf').css('top',offset);
+	}
+</script>
+<!--*****************************************************************-->
+<script type="text/javascript" src="main.js"></script>
+<title>Incremental Game</title>
+<style>
+    body { margin:o; padding:0; }
+</style>
+
+</head>
+
+<body id="body">
+	<div id="topBar">
+	Total Clicks: <a id="counter"></a>
+	</div>
+	
+	<div id="tabSection">
+		<ul class="tabs">
+			<li><a href="#tab1">Clicking</a></li>
+			<li><a href="#adventureTab">Adventure</a></li>
+			<li><a href ="#heroTab">Hero</a></li>
+			<li><a href="#generatorsTab">Stuff</a></li>
+			<li><a href="#gamblingTab">Gambling</a></li>
+			<li><a href="#tab4">Options</a></li>
+		</ul>
+		
+		<div id="tab1">
+		    <p id="mainButtonParagraph">
+			    <button id="mainButton" onclick="clickFunction()">Click Me!</button>
+			    <span id="clickRate">Clicks per click is 1</span>
+		    </p>
+		    <p id="clickUpgradesSection" class="inset"></p>
+		</div>
+		
+		<div id="adventureTab">
+		    <p>There are things yet to go here!</p>
+	    </div>
+	    
+	    <div id="heroTab">
+	    
+		<div id="heroInventory">
+		    </div>
+		    <div id="heroStore">
+		    </div>
+	    </div>
+	    
+		<div id="generatorsTab">	
+		    <div id="informationItems" class="inset">Purchase stuff that generates clicks for you in this tab.  Once you have enough structures you start gambling them for a chance to improve that items' generation rate.
+		    <button onclick="closeButton('informationItems')">close</button><p></p>
+		    </div> 
+		</div>
+		
+		<div id ="gamblingTab">
+		</div>
+		
+		<div id="tab4">
+		    <p> Options <p>
+		    <button onclick="">Save Progress</button>
+
+	</div>
+	
+	<div id="bottomHalf" class="inset">
+		<div id="commentBody" class="inset title">Hello! Welcome to the game! This is a box to relay messages to you. You can name a hero in the Hero tab and start adventuring with him in the Adventure tab.  If you'd like you can also purchase stuff to click for you so you don't have to click that silly button so often.  If you're feeling lucky you can try gambling your stuff in the Gambling tab, too. Have fun, though! There's a lot of content to explore and there will always be more to come! (And it'll all be procedurally generated, so it's a little bit different every time. :~) )</a>	
+	</div>
+</body>
+	
+</html>

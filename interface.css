@@ -6,7 +6,7 @@ body {
    
 }
 .tabs { 
-   background-color: #eee; 
+   background-color: #c0caca; 
    border-bottom: 1px solid #ccc; 
    list-style: none;
    margin: 0; 
@@ -43,7 +43,7 @@ body {
 .tabs a:hover,
 .tabs a:focus,
 .tabs a:active { 
-   background: #fff; 
+   background: #eaeded; /* previously #fff */
    cursor: pointer; 
 }
 .ui-tabs-active a { 
@@ -93,27 +93,94 @@ body {
    visibility: hidden;
 }
 
+#generatorsTab {
+    padding-top:15px;
+}
+#gamblingTab {
+    padding-top:15px;
+}
 
-/*BLOCKS==============================*/
+body {
+    background-color:#eaeded
+}
+
+#mainButton {
+	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
+	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
+	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
+	background-color:#eae0c2;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:11px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+#mainButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
+	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
+	background-color:#ccc2a6;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+/*BLOCKS==============================*/ 
+#topBar {
+        padding-top:10px;
+        padding-bottom:5px;
+        font-style:italic;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
 #tabSection
 	{
 		top:20px;
 		min-height:100px;
 		overflow-y:scroll;
 	}
+#heroName {
+        padding-pot:15px;
+    }
 #bottomHalf
 	{
+	    font-family:Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	    font-size: 16px;
+	    padding-top: 10px;
+	    padding-left:15px;
+	    padding-right:15px;
+	    padding-bottom:20px;
+	    text-align:left;
 		position: absolute; 
 		display: none;
 		left: 0px;
-		height:300px;
+		height:350px;
 		min-height: 100px;
 		right:0px;
 		overflow-x:hidden;
-		overflow-y:scroll;
-		background: #eee;
-	}
-	
+		overflow-y:hidden;
+		background: #c0caca;
+		
+	}	
 /*BUTTONS============================*/
 .button {
 	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
@@ -154,4 +221,44 @@ body {
 .button:active {
 	position:relative;
 	top:1px;
+}
+
+#heroInventory {
+        visibility:hidden;
+        position:absolute;
+        border:1px solid #000;
+        min-width:300px;
+        min-height:200px;
+}
+
+/*HeroStuff========================*/
+#chest {
+        position:relative;
+        top:+55px;
+        left:+125px;
+        right:-125px;
+} 
+#helmet {
+        position:relative;
+        left:+125px;
+        right:-125px;
+}
+#gloves {         
+        position:relative;
+        top:+25px;
+        left:+70px;
+}
+#leftRing {         
+        position:relative;
+        top:+55px;
+        left:+90px;
+}
+#rightRing {         position:relative;
+        top:+40px;
+        left:+155px;
+}
+#sword {
+        position:relative;
+        top:-20px;
+        left:+180px;
 }
